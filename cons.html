@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<ul id="menu">
+    <li>Home</li>
+    <li>About</li>
+    <li>Blog</li>
+    <li>Projects</li>
+
+
+
+</ul>
+
+
+   <script>
+//let txt = document.querySelector(".text"); getting a parent element.
+//console.log(txt.parentNode);
+
+    
+//getting child elements of a node in javascript
+//let parent = document.querySelector(".title");
+//console.log(parent.childNodes);
+
+//getting siblings
+//let second = document.querySelector(".second");
+//console.log(second.nextElementSibling);
+
+
+//manipulating elements
+//create Element method
+
+//let div = document.createElement("div");
+//console.log(div);
+//div.innerHTML = "<p>Welcome to Greatstack 4<p>";
+//div.className = "title"; 
+//console.log(div);
+
+//appendchild() method
+//adding a list
+//let menu = document.getElementById("menu");
+//let list = document.createElement("li");
+//list.innerHTML = "contact";
+//menu.appendChild(list);
+
+//text content
+//let menu = document.getElementById("menu");
+//console.log(menu.innerText);
+
+//let menu = document.getElementById("menu");
+//menu.textContent = "Kyambili!";
+
+//AdjacentHTML
+//let menu = document.getElementById("menu");
+//menu.insertAdjacentHTML("afterend","<li>Contact</li>");
+
+//cloneNode method
+
+///let menu = document.getElementById("menu");
+//let newNode = menu.cloneNode(true);
+//console.log(newNode);
+
+//Remove child method.
+let menu = document.getElementById("menu");
+menu.removeChild(menu.lastElementChild);
+
+
+   </script>
+</body>
+</html>

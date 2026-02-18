@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Construction | Professional Building Services</title>
+    <link rel="stylesheet" href="construct.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Jerry<span>Softwares</span></div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="nav-btn">Get a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Building Excellence, <br>Delivering Quality</h1>
+                <p>Leading the industry in commercial and residential construction with over 20 years of experience.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn-main">View Projects</a>
+                    <a href="#services" class="btn-outline">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <div class="section-title">
+            <h2>Our Core Services</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-hard-hat"></i>
+                <h3>General Contracting</h3>
+                <p>Comprehensive oversight of construction sites, managing vendors and communication.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>Home Renovation</h3>
+                <p>Transforming existing structures into modern, functional, and beautiful spaces.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-building"></i>
+                <h3>Commercial Build</h3>
+                <p>Large-scale construction solutions for businesses, warehouses, and retail hubs.</p>
+            </div>
+        </div>
+    </section>
+
+<section id="projects" class="projects">
+    <div class="section-title">
+        <h2>Our Impactful Projects</h2>
+        <div class="underline"></div>
+    </div>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <i class="fas fa-house-chimney"></i>
+            <h3>The Dream Home</h3>
+            <p>Eradicating poverty and ensuring there is no homelessness through sustainable building.</p>
+        </div>
+
+        <div class="project-card">
+            <i class="fas fa-city"></i>
+            <h3>Urban Renewal</h3>
+            <p>Redesigning city spaces to provide affordable, high-quality apartments for low-income workers.</p>
+        </div>
+
+        <div class="project-card">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h3>Community Hubs</h3>
+            <p>Building centers that provide education and resources to help communities thrive.</p>
+        </div>
+    </div>
+</section>
+<!-----get a quote section-->
+<section id="contact" class="quote-section">
+    <div class="quote-container">
+        <div class="quote-sidebar">
+            <h2>Let’s Build Something Great</h2>
+            <p>Ready to start your project? Fill out the form for a free consultation and project estimate.</p>
+            
+            <div class="contact-info-list">
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+254 700 000 000</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>quotes@titanconstruct.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Nairobi, Kenya</span>
+                </div>
+            </div>
+
+            <div class="process-steps">
+                <h4>Our Process</h4>
+                <ul>
+                    <li><i class="fas fa-check"></i> Initial Consultation</li>
+                    <li><i class="fas fa-check"></i> Site Inspection</li>
+                    <li><i class="fas fa-check"></i> Detailed Proposal</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="quote-form-card">
+            <form id="quote-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                
+                <div class="form-row">
+                    <select required>
+                        <option value="" disabled selected>Project Type</option>
+                        <option value="residential">Residential Home</option>
+                        <option value="commercial">Commercial Building</option>
+                        <option value="renovation">Remodeling</option>
+                        <option value="social">Social Housing</option>
+                    </select>
+                    <select required>
+                        <option value="" disabled selected>Estimated Budget</option>
+                        <option value="small">Under $50k</option>
+                        <option value="medium">$50k - $200k</option>
+                        <option value="large">Over $200k</option>
+                    </select>
+                </div>
+
+                <input type="text" placeholder="Project Location (e.g. Westlands, Nairobi)">
+                <textarea placeholder="Describe your vision and requirements..." rows="5"></textarea>
+                
+                <button type="submit" class="btn-main">Get My Free Quote</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Start Your Project Today</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Tell us about your project requirements..." rows="5"></textarea>
+                <button type="submit" class="btn-main">Send Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright @JerrySoftwares</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

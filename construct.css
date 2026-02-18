@@ -1,0 +1,478 @@
+/* --- Root Variables & Global Reset --- */
+:root {
+    --primary-color: #f39c12;    /* Construction Yellow */
+    --secondary-color: #2c3e50;  /* Professional Navy/Grey */
+    --dark-bg: #1a1a1a;
+    --light-bg: #f9f9f9;
+    --text-white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* --- Navigation --- */
+.navbar {
+    background: rgba(26, 26, 26, 0.95);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: var(--text-white);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li a {
+    color: var(--text-white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+.nav-btn {
+    background: var(--primary-color);
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.nav-btn:hover {
+    background: #e67e22;
+}
+
+/* --- Mobile Toggle --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    transition: var(--transition);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070') center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-btns {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-main, .btn-outline {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.btn-main { background: var(--primary-color); color: white; }
+.btn-outline { border: 2px solid white; color: white; }
+.btn-outline:hover { background: white; color: black; }
+
+/* --- Services --- */
+.services {
+    padding: 100px 10%;
+    background: var(--light-bg);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-bottom: 4px solid transparent;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/*---projects section*/
+
+/* Shared Grid Style for both Sections */
+.service-grid, .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+/* Identical Card Styling */
+.service-card, .project-card {
+    background: var(--white);
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--primary-color); /* The construction-yellow top bar */
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    min-height: 350px; /* Forces all cards to have the same minimum height */
+    transition: var(--transition);
+}
+
+/* Consistent Hover Effect */
+.service-card:hover, .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Icon Styling */
+.service-card i, .project-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Heading & Paragraph Styling */
+.service-card h3, .project-card h3 {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.service-card p, .project-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Section Title Fix */
+.projects {
+    padding: 100px 0;
+    background: var(--white); /* Keeps projects distinct from the light-grey services */
+}
+/*Get a quote section*/
+
+
+/* --- Contact Section --- */
+.contact {
+    padding: 100px 10%;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact-form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--dark-bg);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        background: var(--dark-bg);
+        width: 100%;
+        height: 60vh;
+        justify-content: center;
+        transition: 0.5s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+}
+
+
+/* Get a quote section*/
+/* --- Quote Section Styles --- */
+.quote-section {
+    padding: 100px 8%;
+    background-color: var(--light-bg);
+}
+
+.quote-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Sidebar is narrower than form */
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Sidebar Info */
+.quote-info h2 {
+    font-size: 2.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.quote-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-methods {
+    margin-bottom: 30px;
+}
+
+.method {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.method i {
+    color: var(--primary-color);
+    background: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.trust-badge {
+    display: flex;
+    gap: 10px;
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Form Card Styling */
+.quote-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #fdfdfd;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(243, 156, 18, 0.1);
+}
+
+.btn-main {
+    background: var(--primary-color);
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+.btn-main:hover {
+    background: #d3830e;
+    transform: translateY(-2px);
+}
+
+/* --- Responsiveness --- */
+
+/* Tablets (landscape and portrait) */
+@media (max-width: 992px) {
+    .quote-container {
+        grid-template-columns: 1fr; /* Stack vertically */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .method {
+        justify-content: center;
+    }
+
+    .trust-badge {
+        justify-content: center;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    .quote-section {
+        padding: 60px 5%;
+    }
+
+    .form-group-row {
+        grid-template-columns: 1fr; /* Name and Email stack on small screens */
+    }
+
+    .quote-card {
+        padding: 25px;
+    }
+
+    .quote-info h2 {
+        font-size: 2rem;
+    }
+}
