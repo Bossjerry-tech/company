@@ -53,34 +53,29 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 
 
 /*toggleTheme*/
-window.addEventListener("load", function () {
+document.addEventListener('DOMContentLoaded', () => {
+    const themeBtn = document.getElementById('theme-toggle');
+    const body = document.body;
 
-    // MOBILE MENU TOGGLE
-    const burger = document.getElementById("mobile-menu");
-    const nav = document.getElementById("nav-links");
-
-    if (burger && nav) {
-        burger.addEventListener("click", function () {
-            nav.classList.toggle("nav-active");
-        });
+    // Load preference
+    if (localStorage.getItem('jerry-theme') === 'light') {
+        body.classList.add('light-mode');
+        themeBtn.innerHTML = '☀️';
     }
 
-    // THEME TOGGLE
-    const themeToggle = document.getElementById("theme-toggle");
+    themeBtn.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        const isLight = body.classList.contains('light-mode');
+        
+        // Visual feedback
+        themeBtn.style.transform = 'scale(0.8)';
+        setTimeout(() => {
+            themeBtn.innerHTML = isLight ? '☀️' : '🌙';
+            themeBtn.style.transform = 'scale(1)';
+        }, 150);
 
-    if (themeToggle) {
-        themeToggle.addEventListener("click", function () {
-            document.body.classList.toggle("light-theme");
-
-            // Optional: change icon
-            if (document.body.classList.contains("light-theme")) {
-                themeToggle.textContent = "☀️";
-            } else {
-                themeToggle.textContent = "🌙";
-            }
-        });
-    }
-
+        localStorage.setItem('jerry-theme', isLight ? 'light' : 'dark');
+    });
 });
 
 
