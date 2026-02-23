@@ -77,7 +77,27 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('jerry-theme', isLight ? 'light' : 'dark');
     });
 });
+// icons on scroll//
+// Function to show/hide floating buttons on scroll
+window.addEventListener('scroll', () => {
+    const floatingGroup = document.querySelector('.floating-contact');
+    
+    // Show icons after scrolling 400px down
+    if (window.scrollY > 400) {
+        floatingGroup.classList.add('show');
+    } else {
+        floatingGroup.classList.remove('show');
+    }
+});
 
+// Optional: Add a subtle 'bounce' every 10 seconds to catch attention
+setInterval(() => {
+    const whatsapp = document.querySelector('.whatsapp');
+    if (whatsapp && document.querySelector('.floating-contact').classList.contains('show')) {
+        whatsapp.style.transform = 'scale(1.2)';
+        setTimeout(() => whatsapp.style.transform = 'scale(1)', 300);
+    }
+}, 10000);
 
 
 
